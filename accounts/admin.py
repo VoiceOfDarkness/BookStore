@@ -4,7 +4,6 @@ from django.contrib.auth.admin import UserAdmin
 
 from .forms import CustomUserChangeForm, CustomUserCreationFrom
 
-
 CustomUser = get_user_model()
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):

@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from environ import Env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,11 +32,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+# Third-party
     'crispy_forms',
     'allauth',
     'allauth.account',
+# local apps
     'accounts',
     'pages',
+    'books',
 ]
 
 # django-allauth config
@@ -118,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
