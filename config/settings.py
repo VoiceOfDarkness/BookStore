@@ -156,4 +156,8 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 # django-crispy-forms
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
- 
+
+# media
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
