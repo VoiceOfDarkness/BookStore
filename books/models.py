@@ -12,15 +12,17 @@ class Book(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     cover = models.ImageField(upload_to='covers/', blank=True, null=True)
     
+    class Meta:
+        permissions = [('special_status', 'Can read all books'),]
+        verbose_name = 'Книгу'
+        verbose_name_plural = 'Книги'
+    
     def __str__(self) -> str:
         return self.title
 
     def get_absolute_url(self):
         return reverse('book_detail', kwargs={'pk': self.pk})
     
-    class Meta:
-        verbose_name = 'Книгу'
-        verbose_name_plural = 'Книги'
 
 
 class Review(models.Model):
