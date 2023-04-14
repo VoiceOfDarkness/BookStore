@@ -3,6 +3,9 @@ FROM python:3.10
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+RUN apt-get update
+RUN apt-get install graphviz-dev -y
+
 WORKDIR /books
 
 COPY requirements.txt .
