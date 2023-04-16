@@ -1,7 +1,8 @@
+from django.contrib.auth.mixins import (LoginRequiredMixin,
+                                        PermissionRequiredMixin)
+from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import DetailView, ListView
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.db.models import Q
 
 from .models import Book
 
